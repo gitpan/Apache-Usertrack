@@ -4,8 +4,8 @@ use Apache::Constants;
 use Time::HiRes;
 use integer;
 
-$Apache::Usertrack::revision = sprintf("%d.%02d", q$Revision: 1.1 $ =~ /(\d+)\.(\d+)/o);
-$Apache::Usertrack::VERSION = '0.02';
+$Apache::Usertrack::revision = sprintf("%d.%02d", q$Revision: 1.2 $ =~ /(\d+)\.(\d+)/o);
+$Apache::Usertrack::VERSION = '0.03';
 
 sub make_cookie {
   my $r = shift;

@@ -21,17 +21,19 @@ for(@mods) {
     }
 }
 
-if($errors) {
-    print "\n";
-    print "If you need a module, please download and install it from CPAN.\n";
-    print "Exiting now because of errors!\n";
-    print "\n";
-    exit;
-} else {
-    print "Looks good!\n";
-}
+#if($errors) {
+#    print "\n";
+#    print "If you need a module, please download and install it from CPAN.\n";
+#    print "Exiting now because of errors!\n";
+#    print "\n";
+#    exit;
+#} else {
+#    print "Looks good!\n";
+#}
   
 WriteMakefile(
     'NAME'	=> 'Apache::Usertrack',
     'VERSION_FROM' => 'Usertrack.pm',
+    'PREREQ_PM'    => { 'Time::HiRes'    => 0,
+                      },
 );
